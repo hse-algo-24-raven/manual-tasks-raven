@@ -50,13 +50,13 @@ $$
 При условии, что $\lambda \neq 0$, сокращаем это уравнение на $\lambda^{n-2}$ :
 
 $$ 
-\lambda^2 = 2\lambda - 1 
+\lambda^2 = 2 \cdot \lambda - 1 
 $$ 
 
 Переносим все значения влево:
 
 $$ 
-\lambda^2 - 2\lambda + 1 = 0 
+\lambda^2 - 2 \cdot \lambda + 1 = 0 
 $$ 
 
 Находим корни:
