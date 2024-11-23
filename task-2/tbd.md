@@ -98,11 +98,19 @@ $$
 
 ## Шаг 2: Составить и решить характеристическое уравнение
 
+Запишем характеристическое уравнение в общем виде:
+
+$$
+\lambda^n = a \cdot \lambda^{n - 1} - b \cdot c \cdot \lambda^{n - 2}
+$$
+
+Подставим коэффициенты a = -8, b = 1, c = 15 и получим:
+
 $$
 \lambda^n = -8 \cdot \lambda^{n - 1} - 15 \cdot \lambda^{n - 2}
 $$
 
-Делим полученное выражение на множитель с самой маленкой степень, то есть на $$\lambda^{n - 2}$$.
+Делим полученное выражение на множитель с самой маленкой степенью, то есть на $$\lambda^{n - 2}$$:
 
 $$
 \lambda^n = -8 \cdot \lambda^{n - 1} - 15 \cdot \lambda^{n - 2} | : \lambda^{n - 2}
@@ -144,7 +152,7 @@ $$
 \begin{equation*}
 \begin{cases}
 -8 = -3 \cdot C_1 - 5 \cdot C_2\\
-49 = 9 \cdot C_1 - 25 \cdot C_2
+49 = 9 \cdot C_1 + 25 \cdot C_2
 \end{cases}
 \end{equation*}
 $$
@@ -155,7 +163,7 @@ $$
 \begin{equation*}
 \begin{cases}
 -8 = -3 \cdot C_1 - 5 \cdot C_2 | \cdot 5 \\
-49 = 9 \cdot C_1 - 25 \cdot C_2
+49 = 9 \cdot C_1 + 25 \cdot C_2
 \end{cases}
 \end{equation*}
 $$
@@ -165,7 +173,7 @@ $$
 \begin{equation*}
 \begin{cases}
 -40 = -15 \cdot C_1 - 25 \cdot C_2\\
-49 = 9 \cdot C_1 - 25 \cdot C_2
+49 = 9 \cdot C_1 + 25 \cdot C_2
 \end{cases}
 \end{equation*}
 $$
