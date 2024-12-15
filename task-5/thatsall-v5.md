@@ -6,15 +6,15 @@
 ## Запишем, что нам дано
 <br>
 
-P$_1$ = 7\
-P$_2$ = 3
+P<sub>1</sub>  = 7\
+P<sub>2</sub> = 3
 
 |A|B|C|D|
 |:-|:---:|:----:|---:|
 |45|19|16|10|
 
 ## Найдем минимальное время, за которое можно сделать все задания
-### t$_m$$_i$$_n$ = $\frac{A + B + C + D}{P_1 + P_2}$ = $\frac{45 + 19 + 16 + 10}{7 + 3}$ = 9
+### t<sub>min</sab> = $\frac{A + B + C + D}{P_1 + P_2}$ = $\frac{45 + 19 + 16 + 10}{7 + 3}$ = 9
 <br>
 
 ## Построим таблицу для распределения 
@@ -22,8 +22,8 @@ P$_2$ = 3
 
 |  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| P$_1$ |   |  |  |   |   |   |   |  |   |
-| P$_2$ |   |  |  |   |   |   |   |  |   |
+| P<sub>1</sub> |   |  |  |   |   |   |   |  |   |
+| P<sub>2</sub> |   |  |  |   |   |   |   |  |   |
 
 ## Расставим приоритеты
 
@@ -40,7 +40,7 @@ P$_2$ = 3
 |:-|:---:|:----:|---:| 
 |45|19|16|10|
 |I|II|III|IV|
-|P$_1$|P$_2$||| 
+|P<sub>1</sub>|P<sub>2</sub>||| 
 
 
 
@@ -87,10 +87,12 @@ t = 1
     <td style="text-align: center;"></td>
     <td style="text-align: center;"></td>
     <td style="text-align: center;"></td>
+    <td style="text-align: center;"></td>
   </tr>
   <tr>
     <td>P<sub>2</sub></td>
     <td style="text-align: center;">B</td>
+    <td style="text-align: center;"></td>
     <td style="text-align: center;"></td>
     <td style="text-align: center;"></td>
     <td style="text-align: center;"></td>
@@ -252,4 +254,3 @@ t = 4
     <td style="text-align: center;" >C</td>
   </tr>
 </table>
-![Пример картинки](https://gifs.obs.ru-moscow-1.hc.sbercloud.ru/dd62a285fa275c344110c8cc8833a16cf986b7a4af28fe8bba1136c69102c477.gif)
