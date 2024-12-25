@@ -67,10 +67,9 @@ P<sub>2</sub> = 1
 ```
 Время   |  6   7   8   9  10
 -----------------------------------
-ℕ1 (P1) |  A   A   A   A
-ℕ2 (P2) |  B   B   B   B
+ℕ1 (P1) |  A   A   B   B
+ℕ2 (P2) |  B   B   A   A
 ```
-
 
 ### Этап 3: Завершаем задачи
 
@@ -86,8 +85,8 @@ P<sub>2</sub> = 1
 ```
 Время   |  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24
 ---------------------------------------------------------------------
-ℕ1 (P1) |  A   C   C   D   D   D   C   C   C   A   A   A
-ℕ2 (P2) |  B   A   C   D   B   B   C   A   A   C   C
+ℕ1 (P1) |  В   В   В   В   D   D   D   D   C   C   C   A   A   A
+ℕ2 (P2) |  A   C   D   D   B   B   C   A   A   A   A   C    C   C
 ```
 
 
@@ -97,13 +96,13 @@ P<sub>2</sub> = 1
 | Время  | Исполнитель 1 (P<sub>1</sub>)           | Исполнитель 2 (P<sub>2</sub>)           |
 |--------|-----------------------------------------|-----------------------------------------|
 | 0-8    | A                                       | B                                       |
-| 8-10   | B                                       | A                                       |
-| 10-11  | C                                       | A                                       |
-| 11-12  | C                                       | C                                       |
-| 12-14  | D                                       | D                                       |
+| 8-11   | B                                       | A                                       |
+| 11-12  | B                                       | C                                       |
+| 12-14  | B                                       | D                                       |
 | 14-16  | D                                       | B                                       |
-| 16-17  | C                                       | C                                       |
-| 17-21  | C                                       | A                                       |
+| 16-17  | D                                       | C                                       |
+| 17-18  | D                                       | A                                       |
+| 18-21  | C                                       | A                                       |
 | 21-24  | A                                       | C                                       |
 
 
@@ -118,24 +117,23 @@ axisFormat %H:%M
 Начало выполнения работ : milestone, m1, 01 00:00, 0h
 section Исполнитель 1
 A         :a1, 01 00:00, 8h
-B         :a2, after a1, 2h
-C         :a3, after a2, 1h
-C         :a4, after a3, 1h
-D         :a5, after a4, 2h
-D         :a6, after a5, 2h
-C         :a7, after a6, 1h
-C         :a8, after a7, 4h
-A         :a9, after a8, 3h
+B         :a2, after a1, 6h
+D         :a3, after a2, 4h
+C         :a4, after a3, 3h
+A         :a5, after a4, 3h
+.         :a6, after a5, 0h
+.         :a7, after a5, 0h
+.         :a8, after a5, 0h
+.         :a9, after a5, 0h
 section Исполнитель 2
 B         :b1, 01 00:00, 8h
-A         :b2, after b1, 2h
-A         :b3, after b2, 1h
-C         :b4, after b3, 1h
-D         :b5, after b4, 2h
-B         :b6, after b5, 2h
-C         :b7, after b6, 1h
-A         :b8, after b7, 4h
-C         :b9, after b8, 3h
+A         :b2, after b1, 3h
+C         :b3, after b2, 1h
+D         :b4, after b3, 2h
+B         :b5, after b4, 2h
+C         :b6, after b5, 1h
+A         :b7, after b6, 4h
+C         :b8, after b7, 3h
 Окончание выполнения работ : milestone, m2, after b9, 0h
 ```
 
