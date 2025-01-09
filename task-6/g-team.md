@@ -80,21 +80,21 @@ axisFormat %H:%M
 Начало выполнения работ : milestone, m1, 01 00:00, 0h
 section Исполнитель 1
 A         :a1, 01 00:00, 5h
-A         :a2, after a1, 2,5h
-B         :a3, after a2, 2,5h
-A         :a4, after a3, 2,5h
-B         :a5, after a4, 2,5h
+A         :a2, after a1, 2.5h
+B         :a3, after a2, 2.5h
+A         :a4, after a3, 2.5h
+B         :a5, after a4, 2.5h
 section Исполнитель 2
 B         :b1, 01 00:00, 5h
 C         :b2, after b1, 5h
-C         :b3, after b2, 1,6h
-D         :b4, after b3, 1,6h
-E         :b5, after b4, 1,6h
+C         :b3, after b2, 1.6h
+D         :b4, after b3, 1.6h
+E         :b5, after b4, 1.6h
 section Исполнитель 3
-C         :a1, 01 00:00, 5h
-D         :a2, after a1, 5h
-E         :a3, after a2, 1,6h
-C         :a4, after a3, 1,6h
-D         :a5, after a4, 1,6h
-Окончание выполнения работ : milestone, m2, after b9, 0h
+C         :c1, 01 00:00, 5h
+D         :c2, after c1, 5h
+E         :c3, after c2, 1.6h
+C         :c4, after c3, 1.6h
+D         :c5, after c4, 1.6h
+Окончание выполнения работ : milestone, m2, after c5, 0h
 ```
