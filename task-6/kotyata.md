@@ -37,11 +37,11 @@ $$
 
 Так как изменение приоритетов задач в ходе выполнения работы требует перераспределения исполнителей, необходимо рассчитать в какой момент времени задача будет выполнена или объемы некоторых задач сравняются. Для этого решим ряд уравнений:
 
-$ A = B: 41-6 \cdot t = 25 - 2 \cdot t \Rightarrow t = 4 $ 
+$A = B: 41-6 \cdot t = 25 - 2 \cdot t \Rightarrow t = 4$ 
 
-$ B = C: 25 - 2 \cdot t = 13 - t \Rightarrow t = 12 $
+$B = C: 25 - 2 \cdot t = 13 - t \Rightarrow t = 12$
 
-$ C = D: 13 - t = 11 \Rightarrow t = 2 $
+$C = D: 13 - t = 11 \Rightarrow t = 2$
 
 Так как C и D сравняются раньше, первой точкой перераспределения приоритетов будет $t=2$.
 
@@ -59,11 +59,11 @@ $ C = D: 13 - t = 11 \Rightarrow t = 2 $
 
 Аналогично решаем уравнения, чтобы найти следующее ближайшее событие. 
 
-$ A = B: 29-6 \cdot t = 21 - 2 \cdot t \Rightarrow t = 2 $
+$A = B: 29-6 \cdot t = 21 - 2 \cdot t \Rightarrow t = 2$
 
-$ B = CD: 21 - 2 \cdot t = 11 - \frac {1}{2} \cdot t \Rightarrow t = 6\frac {2}{3} $ 
+$B = CD: 21 - 2 \cdot t = 11 - \frac {1}{2} \cdot t \Rightarrow t = 6\frac {2}{3}$ 
 
-$ CD = E: 11 - \frac {1}{2} \cdot t  = 9 \Rightarrow t = 4 $
+$CD = E: 11 - \frac {1}{2} \cdot t  = 9 \Rightarrow t = 4$
 
 Таким образом, $A$ сравняется с $B$ еще через 2 единицы времени, что требует перераспределения приоритетов в моменте $t=4$.
 
@@ -81,9 +81,9 @@ $ CD = E: 11 - \frac {1}{2} \cdot t  = 9 \Rightarrow t = 4 $
 
 Аналогично решаем уравнения, чтобы найти следующее ближайшее событие. 
 
-$ AB = CD: 17 - 4 \cdot t  = 10 - \frac {1}{2} \cdot t \Rightarrow t = 2 $
+$AB = CD: 17 - 4 \cdot t  = 10 - \frac {1}{2} \cdot t \Rightarrow t = 2$
 
-$ CD = E: 10 - \frac {1}{2} \cdot t = 9 \Rightarrow t = 2 $
+$CD = E: 10 - \frac {1}{2} \cdot t = 9 \Rightarrow t = 2$
 
 В данном случае все задачи сравняются одновременно через 2 единицы времени. 
 
@@ -113,7 +113,7 @@ gantt
     Начало : milestone, m1, 01 00:00, 0h
     C = D : milestone, m2, 01 02:00, 0h
     A = B : milestone, m3, 01 04:00, 0h
-    AB = DC = E : milestone, m4, 01 06:00, 0h
+    A = B = D = C = E : milestone, m4, 01 06:00, 0h
     section  p1
     A         :a1, 01 00:00, 5h
     B         :a2, after a1, 2h
