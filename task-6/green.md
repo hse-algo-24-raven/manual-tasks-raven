@@ -51,13 +51,7 @@ C 12 - 2 * 1 = 10
  3t = 2
  t = 2/3
 
-A 10 - 1/3 * 6 = 8
-B 10 - 1/3 * 4 = 26/3
-C 10 - 1/3 * 2 = 28/3
-
-D 10 - 1/3 * 6 = 8
-C 28/3 - 1/3 * 4 = 8
-B 26/3 - 1/3 * 2 = 8
+ABCD 10 - 3 * 2/3 = 8
 ```
 
 Сразу 5 задач имеют одинаковый приоритет, поэтому назначаем на выполнение сразу всех исполнителей 
@@ -76,17 +70,9 @@ B 26/3 - 1/3 * 2 = 8
 12/5 t = 2
 t = 5/6
 
-A 8 - 6 * 1/6 = 7
-B 8 - 4 * 2/6 = 20/3
-C 8 - 2 * 2/6 = 22/3
+ABCDE 8 - 12/5 * 5/6 = 6
 
-D 8 - 6 * 2/6 = 6
-A 7 - 4 * 1/6 = 38/6
-B 20/3 - 2 * 2/6 = 6
-
-E 8 - 6 * 2/6 = 6
-C 22/3 - 4 * 2/6 = 6
-A 38/6 - 2 * 1/6 = 6
+5/6 / 5 = 1/6
 ```
 
 Сразу 6 задач имеют одинаковый приоритет. 
@@ -101,17 +87,9 @@ A 38/6 - 2 * 1/6 = 6
 6 - 2t = 0
 t = 3
 
-A 6 - 6 * 1 = 0
-B 6 - 4 * 1 = 2
-C 6 - 2 * 1 = 4
+ABCDEF 6 - 2 * 3 = 0
 
-D 6 - 6 * 1 = 0
-E 6 - 4 * 1 = 2
-B 2 - 2 * 1 = 0
-
-F 6 - 6 * 1 = 0
-C 4 - 4 * 1 = 0
-E 2 - 2 * 1 = 0
+3 / 6 = 0.5
 ```
 
 ```
@@ -132,34 +110,67 @@ gantt
     Начало выполнения работ : milestone, m1, 01 00:00, 0h
     section ИСП 1
     A         :a1, 01 00:00, 1h
-    A         :a2, after a1, 0.33h
-    D         :a3, after a2, 0.33h
-    A         :a4, after a3, 0.17h
-    D         :a5, after a4, 0.33h
-    E         :a6, after a5, 0.33h
-    A         :a7, after a6, 1h
-    D         :a8, after a7, 1h
-    F         :a9, after a8, 1h
+
+    A         :a2, after a1, 0.17h
+    B         :a3, after a2, 0.17h
+    C         :a4, after a3, 0.17h
+    D         :a5, after a4, 0.17h
+
+    A         :a6, after a5, 0.17h
+    B         :a7, after a6, 0.17h
+    C         :a8, after a7, 0.17h
+    D         :a9, after a8, 0.16h
+    E         :a10, after a9, 0.16h
+
+    A         :a11, after a10, 0.5h
+    B         :a12, after a11, 0.5h
+    C         :a13, after a12, 0.5h
+    D         :a14, after a13, 0.5h
+    E         :a15, after a14, 0.5h
+    F         :a16, after a15, 0.5h
+
     section ИСП 2
-    B         :b1, 01 00:00, 1h
-    B         :b2, after b1, 0.33h
-    C         :b3, after b2, 0.33h
-    B         :b4, after b3, 0.33h
+    B         :b1, 01 00:00, 1h 
+
+    B         :b2, after b1, 0.17h
+    C         :b3, after b2, 0.17h
+    D         :b4, after b3, 0.17h
     A         :b5, after b4, 0.17h
-    C         :b6, after b5, 0.33h
-    B         :b7, after b6, 1h
-    E         :b8, after b7, 1h
-    C         :b9, after b8, 1h
+
+    B         :b6, after b5, 0.17h
+    C         :b7, after b6, 0.17h
+    D         :b8, after b7, 0.17h
+    E         :b9, after b8, 0.16h
+    A         :b10, after b9, 0.16h
+
+    B         :b11, after b10, 0.5h
+    C         :b12, after b11, 0.5h
+    D         :b13, after b12, 0.5h
+    E         :b14, after b13, 0.5h
+    F         :b15, after b14, 0.5h
+    A         :b16, after b15, 0.5h
+
     section ИСП 3
     C         :c1, 01 00:00, 1h
-    C         :c2, after c1, 0.33h
-    B         :c3, after c2, 0.33h
-    C         :c4, after c3, 0.33h
-    B         :c5, after c4, 0.33h
-    A         :c6, after c5, 0.17h
-    C         :c7, after c6, 1h
-    B         :c8, after c7, 1h
-    E         :c9, after c8, 1h
+
+    C         :c2, after c1, 0.17h
+    D         :c3, after c2, 0.17h
+    A         :c4, after c3, 0.17h
+    B         :c5, after c4, 0.17h
+
+    C         :c6, after c5, 0.17h
+    D         :c7, after c6, 0.17h
+    E         :c8, after c7, 0.17h
+    A         :c9, after c8, 0.16h
+    B         :c10, after c9, 0.16h
+
+    C         :c11, after c10, 0.5h
+    D         :c12, after c11, 0.5h
+    E         :c13, after c12, 0.5h
+    F         :c14, after c13, 0.5h
+    A         :c15, after c14, 0.5h
+    B         :c16, after c15, 0.5h
+
     Окончание выполнения работ : milestone, m2, 01 05:30, 0h
 ```
 Получаем ответ: 5,5
