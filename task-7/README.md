@@ -1,6 +1,6 @@
 # Задание №7
 
-## Оптимальное расписание. Ленточная стратегия.
+## Оптимальное расписание. Лексикографическая стратегия.
 
 **Для выполнения задания рекомендуется установить [Плагин отображения диаграмм Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)**
 
