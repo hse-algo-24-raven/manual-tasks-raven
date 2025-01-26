@@ -109,8 +109,8 @@ graph LR
   
   Получаем:
   
-    ```mermaid
-    graph LR
+```mermaid
+graph LR
     subgraph "Доля 1"
         A[A]
         B[B]
