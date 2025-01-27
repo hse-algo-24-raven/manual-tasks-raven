@@ -52,7 +52,7 @@ E - 5\
 
 ## (2) Построить двудольный граф по основе редуцированной матрицы:
 
-Берём только те паросочетания, в пересечении вершин котрых в таблице стоит "0".
+Берём только те рёбра, в пересечении вершин котрых в таблице стоит "0".
 
 ```mermaid
 graph LR
@@ -83,13 +83,11 @@ graph LR
     style 2 fill:#ccccff, stroke:#0000ff, stroke-width:2px
 ```
 
-Совершенного парасочетания нет, следовательно применяем волновой метод
+Совершенного парасочетания нет, следовательно применяем Строим чередующееся дерево
 
 ## (3) Найти совершенное парасочетание.
 
 Пусть начальные парасочетания [D, 2] и [E, 3]
-
-Волновой метод:
 
 ```mermaid
 graph LR
@@ -177,7 +175,7 @@ graph LR
     style 2 fill:#ccccff, stroke:#0000ff, stroke-width:2px
 ```
 
-Волновой метод:
+Строим чередующееся дерево:
 
 ```mermaid
 graph LR
@@ -226,7 +224,7 @@ graph LR
     style 1 fill:#ffffcc, stroke:#ff9900, stroke-width:2px
 ```
 
-Волновой метод:
+Строим чередующееся дерево:
 
 ```mermaid
 graph LR
@@ -291,6 +289,7 @@ graph LR
         5[5]
     end
     A --- 1
+    A --- 2
     B --- 2
     B --- 5
     C --- 1
@@ -306,7 +305,7 @@ graph LR
     style 1 fill:#ffffcc, stroke:#ff9900, stroke-width:2px
 ```
 
-Волновой метод:
+Строим чередующееся дерево:
 
 ```mermaid
 graph LR
@@ -331,7 +330,7 @@ graph LR
     style C fill:#ccffcc, stroke:#00ff00, stroke-width:2px
 ```
 
-Завершам дерево, так как цепь найдена.
+Завершаем дерево, так как цепь найдена (А-1, 1-C, C-5).
 
 Инвартируем цепь
 
@@ -371,30 +370,30 @@ graph LR
     style 5 fill:#ffffcc, stroke:#ff9900, stroke-width:2px
 ```
 
-Волновой метод:
+Строим чередующееся дерево:
 
 ```mermaid
 graph LR
-    subgraph " 0 "
+    subgraph " 3 "
         4[4]
     end
-    subgraph " 1 "
+    subgraph " 2 "
         C[C]
     end
-    subgraph " 2 "
+    subgraph " 1"
         5[5]
     end
-    subgraph " 3 "
+    subgraph " 0 "
         B[B]
     end
-    4 --> C
-    C --> 5
-    5 --> B
+    C --> 4
+    5 --> C
+    B --> 5
     style 5 fill:#ccffcc, stroke:#00ff00, stroke-width:2px
     style C fill:#ccffcc, stroke:#00ff00, stroke-width:2px
 ```
 
-Завершаем дерево, так как в нём есть чередуцющаяся цепь.
+Завершаем дерево, так как в нём есть чередующаяся цепь.
 
 Инвертируем цепь.
 
