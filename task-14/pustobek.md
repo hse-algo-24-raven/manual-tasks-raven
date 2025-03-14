@@ -24,9 +24,12 @@ $$
 |**B**|  10  |  8  |
 |**C**|  12  |  11  |
 
-A -> 1 6 ед.
-B -> 1 2 ед.
-C -> 2 5 ед.
+A ->1     6 ед.
+
+B ->1     2 ед.
+
+C ->2     5 ед.
+
 S = 20 * 6 + 10 * 2 + 11 * 5 = 195
 
 ```mermaid
@@ -42,4 +45,25 @@ graph LR
    C-->|"(5;5)"|2
    1-->|"(8;8)"|t
    2-->|"(5;5)"|t
+```
+
+Построим остаточную сеть:
+```mermaid
+graph LR
+   S-->|6|A
+   S-->|2|B
+   S-->|5|C
+   A-->|6|1
+   1-.->|6|A
+   2-.->|6|A
+   B-->|2|1
+   2-.->|2|B
+   1-.->|5|C
+   C-->|5|2
+   1-->|8|t
+   2-->|5|t
+   linkStyle 5 stroke:blue,stroke-width:2px;
+   linkStyle 6 stroke:blue,stroke-width:2px;
+   linkStyle 9 stroke:blue,stroke-width:2px;
+   linkStyle 10 stroke:blue,stroke-width:2px;
 ```
