@@ -67,3 +67,19 @@ graph LR
    linkStyle 9 stroke:blue,stroke-width:2px;
    linkStyle 10 stroke:blue,stroke-width:2px;
 ```
+Построим сеть со стоимостью:
+```mermaid
+graph LR
+   S-->|-0|A
+   S-->|-0|B
+   S-->|-0|C
+   A-->||1
+   1-.->||A
+   2-.->||A
+   B-->||1
+   2-.->||B
+   1-.->||C
+   C-->||2
+   1-->|-0|t
+   2-->|-0|t
+```
